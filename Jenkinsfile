@@ -37,5 +37,11 @@ export PATH=$PATH:$M2_HOME/BIN
       }
     }
 
+    stage('Artifact') {
+      steps {
+        archiveArtifacts(artifacts: 'MavenIn28Minutes/target/.jar', allowEmptyArchive: true, caseSensitive: true)
+      }
+    }
+
   }
 }
