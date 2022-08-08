@@ -31,5 +31,11 @@ export PATH=$PATH:$M2_HOME/BIN
       }
     }
 
+    stage('Test') {
+      steps {
+        junit '**/surefire-reports/**/*.xml'
+      }
+    }
+
   }
 }
