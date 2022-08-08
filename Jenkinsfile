@@ -33,7 +33,7 @@ export PATH=$PATH:$M2_HOME/BIN
 
     stage('Test') {
       steps {
-        junit '**/surefire-reports/**/*.xml'
+        junit(testResults: '**/surefire-reports/**/*.xml', allowEmptyResults: true)
       }
     }
 
